@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Strings - M3-Programming</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Strings";
+    var mkdocs_page_input_path = "1.12.string.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> M3-Programming</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.1.introduction/">Intro</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.2.comments/">Comments</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.3.mainmethod/">Main method</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.4.variables/">Variables and Types</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.5.integer/">Integer</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.6.boolean/">Boolean</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.7.floatingpoint/">Floating point</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.8.math/">Math</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.9.character/">Character</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.10.typecasting/">Typecasting</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.11.format/">Format</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Strings</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#creating-strings">Creating strings</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#get-the-length-and-characters-of-a-string">Get the length and characters of a string</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#useful-methods-of-strings">Useful methods of strings</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#exceptions-when-processing-strings">Exceptions when processing strings</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#concatenating-strings">Concatenating strings</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#appending-values-to-a-string">Appending values to a string</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#how-to-compare-strings-correctly">How to compare strings correctly?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#regular-expressions">Regular Expressions</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.13.dates/">Dates</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../3.1.conditionals/">Conditionals</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">M3-Programming</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Strings</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="the-string-type">The String type</h1>
+<p>String is a reference type consisting of characters. Remember, it's not a primitive type. It is one of the most widely used types in Java.
+Here is an example of a string: "Hello, Java". This string is a sequence of 11 characters, including one space.
+This type has some features:
+* immutable type: it's impossible to change a character in a string;
+* it has methods for getting individual characters and substrings;
+* characters can be accessed by indexes, the first character has the index 0, the last one - the length of the string - 1.</p>
+<h2 id="creating-strings">Creating strings</h2>
+<p>A string literal is surrounded by a pair of double quotes, for instance:</p>
+<pre><code class="language-java">String simpleString = &quot;It is a simple string&quot;; // a simple string
+System.out.println(simpleString);  // it prints &quot;It is a simple string&quot;
+
+String anotherString = &quot;This is\nanother\nstring&quot;; // a string with escape sequences
+System.out.println(anotherString); // it prints the result is several lines
+</code></pre>
+<p>A string can represent a long character sequence (text). A string can have one or zero characters. </p>
+<pre><code class="language-java">String strangeText = &quot;aaaaaaaaaaaassssssssssss gggggggggggggggggggg ddddddddddd qqqqqq ffff&quot;;
+String emptyString = &quot;&quot;;
+String s = &quot;s&quot;; // a string consisting of one character
+</code></pre>
+<p>A string can be null. It means no any value assigned.</p>
+<pre><code class="language-java">String nullString = null; // it is null
+Another way to create a variable of type String is used the keyword new.
+String str = new String(&quot;my-string&quot;); // it creates an object and assigns it to the variable
+</code></pre>
+<h2 id="get-the-length-and-characters-of-a-string">Get the length and characters of a string</h2>
+<p>Any string has two useful methods: 
+* length() returns the number of characters in the string;
+* charAt(index) returns a character by its index;
+Here is an example:</p>
+<pre><code class="language-java">String s = &quot;Hi, all&quot;;
+int len = s.length(); // the len is 7
+char theFirstChar = s.charAt(0);  // 'H' has the index 0
+char theFifthChar = s.charAt(4); // 'a' has the index 4
+char theLastChar = s.charAt(s.length() - 1); // 'l' has the index 6
+</code></pre>
+<p>Note, you can easily get a character of a string by the index, but you can't change characters because strings are immutable in Java.</p>
+<h2 id="useful-methods-of-strings">Useful methods of strings</h2>
+<p>The standard library of Java provides a lot of useful methods for processing strings:
+* isEmpty() returns true if the string is empty, otherwise - false;
+* toUpperCase() returns a new string in uppercase;
+* toLowerCase() returns a new string in lowercase;
+* startsWith(prefix) returns true if the string is start with the given string prefix, otherwise - false;
+* contains(...) returns true if the string contains the given string or character;
+* substring(beginIndex, endIndex) returns a substring of the string in the range: beginIndex, endIndex - 1;
+* replace(old, new) returns a new string obtained by replacing all occurrences of old with new that can be chars or strings.</p>
+<p>See the following example to better understand these methods:</p>
+<pre><code class="language-java">String text = &quot;The simple text string&quot;;
+boolean empty = text.isEmpty(); // false
+String textInUpperCase = text.toUpperCase(); // &quot;THE SIMPLE TEXT STRING&quot;
+boolean startsWith = simple.startsWith(&quot;THE&quot;); // true
+/* replace all whitespaces with empty strings */
+String noWhitespaces = text.replace(&quot; &quot;, &quot;&quot;); // &quot;THESIMPLETEXTSTRING&quot;
+</code></pre>
+<p>Listed methods can take different arguments. See Java API for details: https://docs.oracle.com/javase/8/docs/api/java/lang/String.html</p>
+<h2 id="exceptions-when-processing-strings">Exceptions when processing strings</h2>
+<p>When working with strings, there can be several exceptions. </p>
+<ol>
+<li>NullPointerException. If a string is null and you call a method of the string, it throws NullPointerException. </li>
+</ol>
+<pre><code class="language-java">String s = null;
+int length = s.length(); // it throws NullPointerException
+````
+
+2. StringIndexOutOfBoundsException. If you try to access a non-existing character by an index then this exception occurs. 
+```java  
+String s = &quot;ab&quot;;
+char c = s.charAt(2); // it throws StringIndexOutOfBoundsException
+</code></pre>
+<p>Be careful.</p>
+<h2 id="concatenating-strings">Concatenating strings</h2>
+<p>Two string can be concatenated using the "+" operator or the concat method. In both cases, the result is the same.</p>
+<pre><code class="language-java">String firstName = &quot;John&quot;;
+String lastName = &quot;Smith&quot;;
+// concatenation using the &quot;+&quot; operator
+String fullName1 = firstName + &quot; &quot; + lastName; // &quot;John Smith&quot;
+// concatenation using the concat method 
+String fullName2 = firstName.concat(&quot; &quot;).concat(lastName); // &quot;John Smith&quot;
+</code></pre>
+<p>When we concatenate two strings a new string is created (because strings are immutable).
+Important: in the general case str1 + str2 is not the same as str2 + str1 because the concatenation is not a commutative operation.</p>
+<h2 id="appending-values-to-a-string">Appending values to a string</h2>
+<p>It's possible to add values of different types to a string. The value will be automatically converted to a string. See an example below.</p>
+<pre><code class="language-java">String str = &quot;str&quot; + 10 + false; // the result is &quot;str10false&quot;
+````
+In the example above, the order of execution is:
+```java
+&quot;str&quot; + 10 =&gt; &quot;str10&quot; 
+&quot;str10&quot; + false = &quot;str10false&quot; 
+</code></pre>
+<p>Let's see more complex example:</p>
+<pre><code class="language-java">String shortString = &quot;str&quot;;
+long number = 100;
+String result1 = shortString + number + 50; // the result is &quot;str10050&quot;
+String result2 = number + 50 + shortString; // what is the result2?
+</code></pre>
+<p>The result2 is 150str, because, first, we calculate a sum of number and 50 and then concat it with str. The order of operations is important.</p>
+<h2 id="how-to-compare-strings-correctly">How to compare strings correctly?</h2>
+<p>The strings are a reference type you shouldn't compare them using "==" or "!=" operators. In these case, only addresses will be compared, but not actual values. 
+A string has two convenient methods for comparing it with other strings: equals(other) and equalsIgnoreCase(other). See an example below.</p>
+<pre><code class="language-java">String first = &quot;first&quot;;
+String second = &quot;second&quot;;
+String anotherFirst = &quot;first&quot;;
+String secondInUpperCase = &quot;SECOND&quot;;
+System.out.println(first.equals(second)); // false, the strings have different values
+System.out.println(first.equals(anotherFirst)); // true, the strings have the same value
+System.out.println(second.equals(secondInUpperCase)); // false, the strings have different cases
+System.out.println(second.equalsIgnoreCase(secondInUpperCase)); // true, it ignores cases
+</code></pre>
+<p>Do not forget the rules when comparing strings.</p>
+<h2 id="regular-expressions">Regular Expressions</h2>
+<p>Here is a simple java regex example that uses a regular expression to check if a text contains the substring http:// :</p>
+<pre><code class="language-java">String text    =
+        &quot;This is the text to be searched &quot; +
+        &quot;for occurrences of the http:// pattern.&quot;;
+
+String regex = &quot;.*http://.*&quot;;
+boolean matches = Pattern.matches(regex, text);
+System.out.println(&quot;matches = &quot; + matches);
+</code></pre>
+<p>The text variable contains the text to be checked with the regular expression.</p>
+<p>The pattern variable contains the regular expression as a String. The regular expression matches all texts which contains one or more characters (.<em>) followed by the text http:// followed by one or more characters (.</em>).</p>
+<p>The third line uses the Pattern.matches() static method to check if the regular expression (pattern) matches the text. If the regular expression matches the text, then Pattern.matches() returns true. If the regular expression does not match the text Pattern.matches() returns false.</p>
+<p>The example does not actually check if the found http:// string is part of a valid URL, with domain name and suffix (.com, .net etc.). The regular expression just checks for an occurrence of the string http://.
+More info about <a href="https://files.jrebel.com/pdf/zt_regular-expressions-cheat-sheet.pdf">RegEx</a></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../1.13.dates/" class="btn btn-neutral float-right" title="Dates">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../1.11.format/" class="btn btn-neutral" title="Format"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../1.11.format/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../1.13.dates/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
