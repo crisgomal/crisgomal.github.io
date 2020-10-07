@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Math - M3-Programming</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Math";
+    var mkdocs_page_input_path = "1.8.math.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> M3-Programming</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.1.introduction/">Intro</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.2.comments/">Comments</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.3.mainmethod/">Main method</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.4.variables/">Variables and Types</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.5.integer/">Integer</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.6.boolean/">Boolean</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.7.floatingpoint/">Floating point</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Math</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#the-length-of-the-hypotenuse">The length of the hypotenuse</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.9.character/">Character</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.10.typecasting/">Typecasting</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../3.1.conditionals/">Conditionals</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">M3-Programming</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Math</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="the-standard-class-math">The standard class Math</h1>
+<p>The standard class Math, contains a lot of methods for performing basic numeric operations including exponential, modulus, trigonometric functions, finding the max/min of two numbers and so on.</p>
+<p>The most common methods are listed below:</p>
+<ul>
+<li>Math.abs(...) returns the absolute value of its argument</li>
+<li>Math.sqrt(...) returns the square root of its argument</li>
+<li>Math.cbrt(...) returns the cube root of its argument</li>
+<li>Math.pow(..., ...) returns the value of the first argument raised to the power of the second argument</li>
+<li>Math.min(..., ...) returns the smaller value of two arguments</li>
+<li>Math.max(..., ...) returns the greater value of two arguments</li>
+<li>Math.toRadians(...) converts an angle measured in degrees to an angle measured in radians (approximately)</li>
+<li>Math.sin(...) returns the trigonometric sin of the given angle in radians</li>
+<li>Math.cos(...) returns the trigonometric cos of the given angle in radians</li>
+<li>Math.random() returns a double value with a positive sign, greater than or equal to 0.0 and less than 1.0</li>
+<li>Math.floor(...) returns the largest double value that is less than or equal to its argument and is equal to an integer</li>
+<li>Math.ceil(...) returns the smallest double value that is greater than or equal to its argument and is equal to an integer</li>
+</ul>
+<p>More useful methods see in docs: https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html</p>
+<p>Also this class has two useful constants:</p>
+<ul>
+<li>Math.PI - the ratio of the circumference of a circle to its diameter</li>
+<li>Math.E - the base of the natural logarithm</li>
+</ul>
+<h2 id="examples">Examples</h2>
+<p>Let's look at examples of all the considered methods:</p>
+<pre><code class="language-java">    int abs = Math.abs(-10); // abs is 10
+    double dabs = Math.abs(-10.33); // dabs is 10.33
+
+    double sqrt = Math.sqrt(2); // sqrt is 1.4142...
+    double cbrt = Math.cbrt(27.0); // cbrt is 3.0
+
+    double square = Math.pow(5, 2); // the square of 5 is 25.0
+    double cube = Math.pow(2, 3); // the cube of 2 is 8.0
+
+    int min = Math.min(11, 81); // min is 11
+    int max = Math.max(20, 30); // max is 30
+
+    double grad = Math.toRadians(30); // grad is 0.5235...
+
+    double pi = Math.PI; // pi is 3.1415...
+    double sin = Math.sin(pi / 2); // sin is 1.0
+    double cos = Math.cos(pi); // cos90 is -1.0
+
+    double random = Math.random(); // a random value &gt;= 0.0 and &lt; 1.0
+
+    double floor = Math.floor(3.78); // floor is 3.0
+    double ceil = Math.ceil(4.15); // ceil is 5.0
+</code></pre>
+<h2 id="the-length-of-the-hypotenuse">The length of the hypotenuse</h2>
+<p>Let's assume we have a right-angled triangle (one angle is 90 degree). We know the lengths of the two sides: a = 3 and b = 4.</p>
+<p>To calculate the length of hypotenuse we can write the following code:</p>
+<pre><code class="language-java">    double a = 3, b = 4;
+    double c = Math.hypot(a, b); // c is 5.0
+</code></pre>
+<p>As you can see, the Math class has a lot of methods for performing numeric calculations.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../1.9.character/" class="btn btn-neutral float-right" title="Character">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../1.7.floatingpoint/" class="btn btn-neutral" title="Floating point"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../1.7.floatingpoint/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../1.9.character/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

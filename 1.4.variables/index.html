@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Variables and Types - M3-Programming</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Variables and Types";
+    var mkdocs_page_input_path = "1.4.variables.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> M3-Programming</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.1.introduction/">Intro</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.2.comments/">Comments</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.3.mainmethod/">Main method</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Variables and Types</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#data-types">Data types</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#sizes-and-ranges-of-primitive-types">Sizes and ranges of primitive types</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#rules-for-naming-variables">Rules for naming variables</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#naming-conventions-for-variables">Naming conventions for variables</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#input-and-output-in-java-code">Input and output in Java code</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ide-tips-tricks">IDE tips &amp; tricks</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.5.integer/">Integer</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.6.boolean/">Boolean</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.7.floatingpoint/">Floating point</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.8.math/">Math</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.9.character/">Character</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.10.typecasting/">Typecasting</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../3.1.conditionals/">Conditionals</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">M3-Programming</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Variables and Types</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="variables">Variables</h1>
+<p>A variable is a named storage for a value. It has a name (identifier) and a type. The name identifies a variable in some context. It's possible to read and change the value of a variable by its name. The general form for declaring variables is the following:</p>
+<pre><code class="language-java">DataType variableName;
+</code></pre>
+<p>The type (data type) of a variable determines which values can be stored in the variable and the possible operations you can perform on them.</p>
+<h2 id="data-types">Data types</h2>
+<p>Java is a statically typed programming language, which means that every variable and every expression has a type that is known at the compile time.</p>
+<p><strong>All data types are separated into two groups: primitive types and references types.</strong></p>
+<p>A <strong>primitive type</strong> variable stores a simple value (such as a number or character). Java has eight primitive data types. They can be divided into four groups:</p>
+<ul>
+<li>integer numbers: byte, short, int, long (for example, 83 is an integer number)</li>
+<li>floating-point numbers: float, double (for example, 3.1415 is a floating point number)</li>
+<li>logical type: boolean (true or false)</li>
+<li>characters: char (for example, 'a', '3') The most used primitive types are int, long, boolean, char and double.
+primitiveDataTypes</li>
+</ul>
+<p><img alt="PrimitiveDataTypes" src="../img/primitiveDataTypes.png" /></p>
+<p>A <strong>reference type</strong> variable stores an address in memory where the data is located. The data can be made up as a complex structure that includes other data types as their parts.</p>
+<p>We will often use the reference type String. It represents a sequence of characters like "abc" or "Hello, Java".</p>
+<p>Let's declare a variable named number of the type int:</p>
+<pre><code class="language-java">int number;
+</code></pre>
+<p>Here is a variable named text of the type String:</p>
+<pre><code class="language-java">String text;
+</code></pre>
+<h2 id="sizes-and-ranges-of-primitive-types">Sizes and ranges of primitive types</h2>
+<p>Integer types store numbers such as 10, 15, -14. The size of the values that can be stored depends on the integer type that we choose. The range of values is calculated as −(2n−1) -2^(n-1) to 2^(n−1)−1, where n is the number of bits. The range includes 0 as well.</p>
+<ul>
+<li>byte: the size is 8 bits (1 byte), the range is from -128 to +127</li>
+<li>short: the size is 16 bits (2 bytes), the range is from -32768 to +32767</li>
+<li>int: the size is 32 bits (4 bytes), the range is from −(2^31) to +(2^31)-1</li>
+<li>long: the size is 64 bits (8 bytes), the range is from −(2^63) to +(2^63)-1</li>
+</ul>
+<p>Floating-point types represent numbers with a fractional part.</p>
+<ul>
+<li>float: the size is 32 bits (4 bytes), the range is from 3.4e−038 to 3.4e+038 (approximately, 6-7 significant decimal digits)</li>
+<li>double: the size is 64 bits (8 bytes), the range is from 1.7e−308 to 1.7e+308 (approximately, 14-16 significant decimal digits)
+The character type (char) stores the character constant in the memory. The size is 16 bits (2 bytes). The range is from 0 to 65536 (unsigned).</li>
+</ul>
+<p>The boolean type can store only two values: true or false. It represents only one bit of information, but its size is not something that's precisely defined.</p>
+<p>So, remember Java has 8 primitive types. The most used are int, long, boolean, char, and double.</p>
+<p>The assignment operator
+Java has a special operator denoted as =. It assigns a value to a variable.</p>
+<p>In this case, the variable has to be declared already:</p>
+<pre><code class="language-java">variableName = value;
+</code></pre>
+<p>It is also possible to declare and initialize a variable in one line:</p>
+<pre><code class="language-java">DataType variableName = value;
+</code></pre>
+<pre><code class="language-java">class Task {
+  public static void main(String[] args) {
+// put your code here
+    int one = 1; // declares an integer variable &quot;one&quot; and assigns the value 1 to it
+    int two; // declares an integer variable &quot;two&quot;
+    two = 2; // assign the value 2 to the variable &quot;two&quot;
+    int three = 3, four = 4; // declares two integer variables and assigns values to them
+  }
+}
+</code></pre>
+<p>To read the value of a variable you should write its name.</p>
+<p>For example, let's print the variables:</p>
+<pre><code>System.out.println(one); // prints 1
+System.out.println(two); // prints 2
+System.out.println(three); // prints 3
+System.out.println(four); // prints 4
+</code></pre>
+<p>In the following example, the variable five is declared and initialized with the value of another variable:</p>
+<pre><code>int five = four; // read the value of the variable "four" and assign it to the variable "five";
+</code></pre>
+<p>Here are some more variables:</p>
+<pre><code class="language-java">  char ch = 'A'; // declare a character variable named &quot;ch&quot; and assign 'A' to it
+  String str = &quot;Hello, Java&quot;; // declare a string variable named &quot;str&quot; and assign text to it
+  double pi = 3.1415; // declare a double variable named &quot;pi&quot; and assign 3.1415 to it
+</code></pre>
+<p>For more details about variables go here : https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html</p>
+<h2 id="rules-for-naming-variables">Rules for naming variables</h2>
+<p>Java has some rules for naming variables:</p>
+<ul>
+<li>names are case-sensitive</li>
+<li>a name can include Unicode letters, digits, and two special characters ($, _)</li>
+<li>a name can't start with a digit</li>
+<li>a name must not be a keyword (class, static, and int are illegal names) You cannot break these rules, otherwise, your program will not compile.</li>
+</ul>
+<p>Here are some legal names of variables:</p>
+<pre><code class="language-java">number, $ident, bigValue, _val, abc, k, var
+</code></pre>
+<p>And here are some illegal ones:</p>
+<pre><code class="language-java">@ab, 1c, !ab, class
+</code></pre>
+<p>Ever since Java 9, the single character _ is an illegal way to name a variable, but _a and __ are legal names.</p>
+<h2 id="naming-conventions-for-variables">Naming conventions for variables</h2>
+<p>Also, there are naming conventions for naming variables:</p>
+<ul>
+<li>if a variable name has a single word it should be in lowercase (for instance: number, val)</li>
+<li>if a variable name includes multiple words it should be in lowerCamelCase, i.e. the first word should be in lowercase and each word after the first has its first letter written in uppercase (for instance: numberOfCoins)</li>
+<li>variable names should not start with _ or $ characters, even though both are allowed</li>
+</ul>
+<p>These conventions are not required, but it is strongly recommended to follow them. They make your code more readable for yourself and other Java programmers.</p>
+<h2 id="input-and-output-in-java-code">Input and output in Java code</h2>
+<p>There are several ways to read values from the standard input. The first way is to use java.util.Scanner.</p>
+<p>Let's read two integer numbers from the standard input, add them together and write the result in the standard output:</p>
+<pre><code class="language-java">import java.util.Scanner;
+public class Task {
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    int a = scanner.nextInt(); // it reads an integer value from the standard input
+    int b = scanner.nextInt(); // it reads another integer value from the standard input
+    System.out.println(a + b); // it writes the result of a + b in the standard output
+  }
+}
+</code></pre>
+<p>Another common way to read integer numbers is to use java.io.BufferedReader.</p>
+<p>Let's read two integer numbers, add them together and write the result in the standard output again:</p>
+<pre><code class="language-java">import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+public class Task {
+  public static void main(String[] args) throws IOException {
+// the object for reading
+    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+// it takes a string and splits it by whitespaces
+    String[] values = reader.readLine().split(&quot;\\s+&quot;);
+    int a = Integer.parseInt(values[0]); // It converts the first value to integer
+    int b = Integer.parseInt(values[1]); // It converts the second value to integer
+    System.out.println(a + b);
+  }
+}
+</code></pre>
+<h2 id="ide-tips-tricks">IDE tips &amp; tricks</h2>
+<p>Code autocompletion can help you to find the right variable. Once declared, a variable is added to the autocompletion list. Just start typing or simply press Ctrl + Space to get a list of all the options.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../1.5.integer/" class="btn btn-neutral float-right" title="Integer">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../1.3.mainmethod/" class="btn btn-neutral" title="Main method"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../1.3.mainmethod/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../1.5.integer/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

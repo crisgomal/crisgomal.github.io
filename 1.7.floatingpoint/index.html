@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Floating point - M3-Programming</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Floating point";
+    var mkdocs_page_input_path = "1.7.floatingpoint.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> M3-Programming</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.1.introduction/">Intro</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.2.comments/">Comments</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.3.mainmethod/">Main method</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.4.variables/">Variables and Types</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.5.integer/">Integer</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.6.boolean/">Boolean</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Floating point</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#arithmetic-operations">Arithmetic operations</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.8.math/">Math</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.9.character/">Character</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.10.typecasting/">Typecasting</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../3.1.conditionals/">Conditionals</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">M3-Programming</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Floating point</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="single-and-double-precision-floating-point-numbers">Single and double precision floating-point numbers</h1>
+<p>There are two primitive floating point types: single-precision float (32 bits) and double-precision double (64 bits).</p>
+<p>Let's declare and initialize some variables of these types:</p>
+<pre><code class="language-java">    double zero = 0.0;
+    double e = 2.71828;      // or 2.71828d
+    double eps = 5e-3;       // 5 * 10^(-3) = 0.0005
+
+    float pi = 3.1415f;      // the literal f is always needed
+    float negValue = -0.15f; // the negative value
+</code></pre>
+<p>These types can store only a limited number of significant decimal digits (~6-7 for float and ~14-16 for double):</p>
+<pre><code class="language-java">    float f = 0.888888888888888888f; // a value with a lot of decimal digits
+    System.out.println(f);           // it prints 0.8888889
+</code></pre>
+<p>The following code lets you know the size, the min and the max value of the double type:</p>
+<pre><code class="language-java">    System.out.println(Double.SIZE);      // 64 bits
+    System.out.println(Double.MIN_VALUE); // 4.9E-324
+    System.out.println(Double.MAX_VALUE); // 1.7976931348623157E308
+</code></pre>
+<h2 id="arithmetic-operations">Arithmetic operations</h2>
+<p>It's possible to perform all arithmetic operations with double and float numbers:</p>
+<ul>
+<li>addition +</li>
+<li>subtraction -</li>
+<li>multiplication *</li>
+<li>integer division /</li>
+<li>remainder %</li>
+</ul>
+<pre><code class="language-java">    System.out.println(3.4 + 6.1); // prints 9.5
+    System.out.println(1.1 * 2.0); // prints 2.2
+</code></pre>
+<p>We can even increment and decrement the numbers.</p>
+<p>But be careful, the operations with floating-point numbers can produce an inaccurate result:</p>
+<pre><code class="language-java">    System.out.println(3.3 / 3); // prints 1.0999999999999999
+</code></pre>
+<p>Errors can accumulate during computation:</p>
+<pre><code class="language-java">    double val = 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1;
+    System.out.println(val); // it prints 0.9999999999999999
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../1.8.math/" class="btn btn-neutral float-right" title="Math">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../1.6.boolean/" class="btn btn-neutral" title="Boolean"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../1.6.boolean/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../1.8.math/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

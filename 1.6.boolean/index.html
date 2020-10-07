@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Boolean - M3-Programming</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Boolean";
+    var mkdocs_page_input_path = "1.6.boolean.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> M3-Programming</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.1.introduction/">Intro</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.2.comments/">Comments</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.3.mainmethod/">Main method</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.4.variables/">Variables and Types</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.5.integer/">Integer</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Boolean</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#logical-operators">Logical operators</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#short-circuit-operators">Short-circuit operators</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#the-precedence-of-logical-operators">The precedence of logical operators</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#relational-operators">Relational operators</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#comparing-integer-numbers">Comparing integer numbers</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#comparing-characters">Comparing characters</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#comparing-floating-point-numbers">Comparing floating-point numbers</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#joining-relational-operations-using-logical-operators">Joining relational operations using logical operators</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.7.floatingpoint/">Floating point</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.8.math/">Math</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.9.character/">Character</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.10.typecasting/">Typecasting</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../3.1.conditionals/">Conditionals</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">M3-Programming</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Boolean</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="the-boolean-type">The boolean type</h1>
+<p>The boolean is a primitive data type that has only two possible values: false or true. The default value for this type is false.</p>
+<pre><code class="language-java">    boolean t = true; // t is true
+    boolean f = false; // f is false
+    boolean defaultValue; // defaultValue is false
+</code></pre>
+<p>Note: Remember, you cannot assign an integer value to a boolean variable. In Java, 0 is not equal to false.</p>
+<h2 id="logical-operators">Logical operators</h2>
+<p>There are four logical operators NOT, AND, OR and XOR which allow us to build logical expressions.</p>
+<p>The NOT operator is a unary operator that reverses the boolean value. It is written as !.</p>
+<pre><code class="language-java">    boolean f = false; // f is false
+    boolean t = !f; // t is true
+</code></pre>
+<p>The AND operator is a binary operator that returns true if both operands are true, otherwise, it is false. The operator can be written as &amp;&amp; and &amp;.</p>
+<pre><code class="language-java">    boolean b1 = false &amp;&amp; false; // false
+    boolean b2 = false &amp;&amp; true; // false
+    boolean b3 = true &amp;&amp; false; // false
+    boolean b4 = true &amp;&amp; true; // true
+</code></pre>
+<p>The OR operator is a binary operator that returns true if at least one operand is true, otherwise, it returns false. The operator can be written as ||and |.</p>
+<pre><code class="language-java">    boolean b1 = false || false; // false
+    boolean b2 = false || true; // true
+    boolean b3 = true || false; // true
+    boolean b4 = true || true; // true
+</code></pre>
+<p>The XOR (exclusive OR) operator is a binary operator that returns true if boolean operands have different values, otherwise, it is false. The operator is written as ^ and can be used Instead of the relation operator != (NOT EQUAL TO).</p>
+<pre><code class="language-java">    boolean b1 = false ^ false; // false
+    boolean b2 = false ^ true; // true
+    boolean b3 = true ^ false; // true
+    boolean b4 = true ^ true; // false
+</code></pre>
+<h2 id="short-circuit-operators">Short-circuit operators</h2>
+<p>The AND and OR operators have two forms: AND ( &amp;, &amp;&amp;), OR ( |, ||).</p>
+<p>There are some differences:
+* the &amp; and | operators are also used as bitwise operators for integer types;
+* the &amp;&amp; and || operator perform Conditional-AND and Conditional-OR operations on two boolean expressions. These operators are called "short-circuit" operators, which means that the second operand is evaluated only when it is needed (when the first argument doesn't suffice to determine the value of the expression).
+In the following example, the second operand a&gt;5 will not be evaluated because the result is determined by the first operand (a==10 is false):</p>
+<pre><code class="language-java">    int a = 20;
+    boolean result = (a == 10) &amp;&amp; (a &gt; 5); // the second expressions can't be evaluated
+</code></pre>
+<h2 id="the-precedence-of-logical-operators">The precedence of logical operators</h2>
+<p>Below the logical operations are sorted in order of their priority in expressions: ! - NOT &amp; - AND ^ - XOR | - OR &amp;&amp; - conditional AND || - conditional OR So, the following statement is true:</p>
+<pre><code class="language-java">    boolean b = true &amp;&amp; !false; // true, because !false is evaluated first
+</code></pre>
+<h2 id="relational-operators">Relational operators</h2>
+<p>A relational operator tests or defines some kind of relation between two operands.</p>
+<p>Java has six relational operators:</p>
+<ul>
+<li>== (equal to)</li>
+<li>!= (not equal to)</li>
+<li>
+<blockquote>
+<p>(greater than)</p>
+</blockquote>
+</li>
+<li>
+<blockquote>
+<p>= (greater than or equal to)</p>
+</blockquote>
+</li>
+<li>&lt; (less than)</li>
+<li>&lt;= (less than or equal to)
+The result of applying a relational operator to operands is the boolean type (true or false).</li>
+</ul>
+<p>Operators == and != can be applied to operands of any primitive types, but operators &gt;, &gt;=, &lt;, &lt;= cannot be applied to boolean operands.</p>
+<p>In expressions, the relational operators have a lower priority than arithmetic operators.</p>
+<h2 id="comparing-integer-numbers">Comparing integer numbers</h2>
+<p>Relational operators allow you to easily compare two integer numbers:</p>
+<pre><code class="language-java">    int num1 = 4;
+    int num2 = 2;
+
+    boolean b1 = num1 == num2; // false
+    boolean b2 = num1 &gt; num2;  // true
+
+    boolean b3 = 500 != 500;   // false
+    boolean b4 = 300 &lt;= 300;   // true
+</code></pre>
+<p>We can compare longs, bytes, and shorts in the same way.</p>
+<p>In the following example, first, the sums will be calculated and then will be compared using the operator &gt;:</p>
+<pre><code class="language-java">    long number = 1000;
+    boolean result = number + 10 &gt; number + 9; // 1010 &gt; 1009 is true
+</code></pre>
+<h2 id="comparing-characters">Comparing characters</h2>
+<p>Characters are ordered, it's possible to compare two characters by their code values using any relational operations.</p>
+<p>Characters can be compared ( ==, !=, &lt;, &lt;=, &gt;, &gt;=) by their codes:</p>
+<pre><code class="language-java">    System.out.println('a' &lt; 'b');  // prints &quot;true&quot;
+    System.out.println('a' == 'a'); // prints &quot;true&quot;
+    System.out.println('e' &lt; 'E');  // prints &quot;false&quot;
+</code></pre>
+<h2 id="comparing-floating-point-numbers">Comparing floating-point numbers</h2>
+<p>During the operation with floating-point numbers, errors can be accumulated.</p>
+<p>Do not use == or != when comparing floating-point numbers in Java. Instead, if you'd like to compare two floating-point values a and b, use the standard way:</p>
+<pre><code class="language-java">    Math.abs(a - b) &lt; eps
+</code></pre>
+<p>It means the absolute value of the difference is less than a certain epsilon.</p>
+<p>Here is an example why it's important:</p>
+<pre><code class="language-java">    double val = 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1 + 0.1; // 0.99999...
+    System.out.println(val == 1.0); // it prints &quot;false&quot;
+    System.out.println(Math.abs(val - 1.0) &lt; 1e-6); // it prints &quot;true&quot;
+</code></pre>
+<h2 id="joining-relational-operations-using-logical-operators">Joining relational operations using logical operators</h2>
+<p>In Java, you cannot write an expression like this:</p>
+<pre><code class="language-java">    a &lt;= b &lt;= c
+</code></pre>
+<p>Instead, you should join two boolean expressions using logical operators like || and &amp;&amp;.</p>
+<p>For example, we'd like to check the expression: 100 &lt; number &lt; 200 In Java we should write something like this:</p>
+<pre><code class="language-java">    number &gt; 100 &amp;&amp; number &lt; 200
+</code></pre>
+<p>Also, we can write with parentheses:</p>
+<pre><code>(number &gt; 100) &amp;&amp; (number &lt; 200)
+</code></pre>
+<p>But parentheses are not necessary here because relational operators have the higher priority than logical operators.</p>
+<p>Here is a more general example of variables:
+```java 
+    //the code checks that the value of number belongs to a range</p>
+<pre><code>int number = ...             // it has a value
+int low = 100, high = 200;   // borders
+
+boolean inRange = number &gt; low &amp;&amp; number &lt; high;  // join two expressions using AND
+</code></pre>
+<p>∫```
+So, logical operators allow you to join a sequence of relational operations into one expression.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../1.7.floatingpoint/" class="btn btn-neutral float-right" title="Floating point">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../1.5.integer/" class="btn btn-neutral" title="Integer"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../1.5.integer/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../1.7.floatingpoint/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
