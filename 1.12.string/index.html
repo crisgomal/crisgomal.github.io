@@ -160,15 +160,16 @@
                 <h1 id="the-string-type">The String type</h1>
 <p>String is a reference type consisting of characters. Remember, it's not a primitive type. It is one of the most widely used types in Java.
 Here is an example of a string: "Hello, Java". This string is a sequence of 11 characters, including one space.
-This type has some features:
-* immutable type: it's impossible to change a character in a string;
-* it has methods for getting individual characters and substrings;
-* characters can be accessed by indexes, the first character has the index 0, the last one - the length of the string - 1.</p>
+This type has some features:</p>
+<ul>
+<li>immutable type: it's impossible to change a character in a string;</li>
+<li>it has methods for getting individual characters and substrings;</li>
+<li>characters can be accessed by indexes, the first character has the index 0, the last one - the length of the string - 1.</li>
+</ul>
 <h2 id="creating-strings">Creating strings</h2>
 <p>A string literal is surrounded by a pair of double quotes, for instance:</p>
 <pre><code class="language-java">String simpleString = &quot;It is a simple string&quot;; // a simple string
 System.out.println(simpleString);  // it prints &quot;It is a simple string&quot;
-
 String anotherString = &quot;This is\nanother\nstring&quot;; // a string with escape sequences
 System.out.println(anotherString); // it prints the result is several lines
 </code></pre>
@@ -183,10 +184,12 @@ Another way to create a variable of type String is used the keyword new.
 String str = new String(&quot;my-string&quot;); // it creates an object and assigns it to the variable
 </code></pre>
 <h2 id="get-the-length-and-characters-of-a-string">Get the length and characters of a string</h2>
-<p>Any string has two useful methods: 
-* length() returns the number of characters in the string;
-* charAt(index) returns a character by its index;
-Here is an example:</p>
+<p>Any string has two useful methods: </p>
+<ul>
+<li>length() returns the number of characters in the string;</li>
+<li>charAt(index) returns a character by its index;
+Here is an example:</li>
+</ul>
 <pre><code class="language-java">String s = &quot;Hi, all&quot;;
 int len = s.length(); // the len is 7
 char theFirstChar = s.charAt(0);  // 'H' has the index 0
@@ -195,14 +198,16 @@ char theLastChar = s.charAt(s.length() - 1); // 'l' has the index 6
 </code></pre>
 <p>Note, you can easily get a character of a string by the index, but you can't change characters because strings are immutable in Java.</p>
 <h2 id="useful-methods-of-strings">Useful methods of strings</h2>
-<p>The standard library of Java provides a lot of useful methods for processing strings:
-* isEmpty() returns true if the string is empty, otherwise - false;
-* toUpperCase() returns a new string in uppercase;
-* toLowerCase() returns a new string in lowercase;
-* startsWith(prefix) returns true if the string is start with the given string prefix, otherwise - false;
-* contains(...) returns true if the string contains the given string or character;
-* substring(beginIndex, endIndex) returns a substring of the string in the range: beginIndex, endIndex - 1;
-* replace(old, new) returns a new string obtained by replacing all occurrences of old with new that can be chars or strings.</p>
+<p>The standard library of Java provides a lot of useful methods for processing strings:</p>
+<ul>
+<li><strong>isEmpty()</strong> returns true if the string is empty, otherwise - false;</li>
+<li><strong>toUpperCase()</strong> returns a new string in uppercase;</li>
+<li><strong>toLowerCase()</strong> returns a new string in lowercase;</li>
+<li><strong>startsWith(prefix)</strong> returns true if the string is start with the given string prefix, otherwise - false;</li>
+<li><strong>contains(...)</strong> returns true if the string contains the given string or character;</li>
+<li><strong>substring(beginIndex, endIndex)</strong> returns a substring of the string in the range: beginIndex, endIndex - 1;</li>
+<li><strong>replace(old, new)</strong> returns a new string obtained by replacing all occurrences of old with new that can be chars or strings.</li>
+</ul>
 <p>See the following example to better understand these methods:</p>
 <pre><code class="language-java">String text = &quot;The simple text string&quot;;
 boolean empty = text.isEmpty(); // false
@@ -219,11 +224,11 @@ String noWhitespaces = text.replace(&quot; &quot;, &quot;&quot;); // &quot;THESI
 </ol>
 <pre><code class="language-java">String s = null;
 int length = s.length(); // it throws NullPointerException
-````
-
-2. StringIndexOutOfBoundsException. If you try to access a non-existing character by an index then this exception occurs. 
-```java  
-String s = &quot;ab&quot;;
+</code></pre>
+<ol>
+<li>StringIndexOutOfBoundsException. If you try to access a non-existing character by an index then this exception occurs. </li>
+</ol>
+<pre><code class="language-java">String s = &quot;ab&quot;;
 char c = s.charAt(2); // it throws StringIndexOutOfBoundsException
 </code></pre>
 <p>Be careful.</p>
@@ -241,10 +246,9 @@ Important: in the general case str1 + str2 is not the same as str2 + str1 becaus
 <h2 id="appending-values-to-a-string">Appending values to a string</h2>
 <p>It's possible to add values of different types to a string. The value will be automatically converted to a string. See an example below.</p>
 <pre><code class="language-java">String str = &quot;str&quot; + 10 + false; // the result is &quot;str10false&quot;
-````
-In the example above, the order of execution is:
-```java
-&quot;str&quot; + 10 =&gt; &quot;str10&quot; 
+</code></pre>
+<p>In the example above, the order of execution is:</p>
+<pre><code class="language-java">&quot;str&quot; + 10 =&gt; &quot;str10&quot; 
 &quot;str10&quot; + false = &quot;str10false&quot; 
 </code></pre>
 <p>Let's see more complex example:</p>
@@ -272,7 +276,6 @@ System.out.println(second.equalsIgnoreCase(secondInUpperCase)); // true, it igno
 <pre><code class="language-java">String text    =
         &quot;This is the text to be searched &quot; +
         &quot;for occurrences of the http:// pattern.&quot;;
-
 String regex = &quot;.*http://.*&quot;;
 boolean matches = Pattern.matches(regex, text);
 System.out.println(&quot;matches = &quot; + matches);

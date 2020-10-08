@@ -101,6 +101,8 @@
                 </ul>
                 <ul class="current">
                     <li class="toctree-l1 current"><a class="reference internal current" href="./">Dates</a>
+    <ul class="current">
+    </ul>
                     </li>
                 </ul>
                 <ul>
@@ -139,8 +141,86 @@
           <div role="main">
             <div class="section">
               
-                <p><a href="https://github.com/winterbe/java8-tutorial#date-api">Link1</a>
-<a href="http://tutorials.jenkov.com/java-date-time/parsing-formatting-dates.html">Link2</a></p>
+                <p>The most commonly used classes are LocalDate, LocalTime and LocalDateTime. As their names indicate, they represent the local Date/Time from the context of the observer.</p>
+<h2 id="localdate">LocalDate</h2>
+<p>The LocalDate represents a date in ISO format (yyyy-MM-dd) without time. It can be used to store dates like birthdays and paydays.</p>
+<p>An instance of current date can be created from the system clock as below:</p>
+<pre><code class="language-java">LocalDate localDate = LocalDate.now();
+</code></pre>
+<p>The LocalDate representing a specific day, month and year can be obtained using the “of” method or by using the “parse” method. For example the below code snippets represents the LocalDate for 20 February 2020:</p>
+<pre><code class="language-java">LocalDate.of(2020, 02, 20);
+LocalDate.parse(&quot;2020-02-20&quot;);
+</code></pre>
+<p>Useful methods are:</p>
+<ul>
+<li>plusDays(int):add extra days to a date</li>
+<li>minus(int): substract some days to a date </li>
+<li>isLeapYear(): check if the year is leap or not (t/f)</li>
+<li>getDayOfWeek()</li>
+<li>getDayOfMonth()</li>
+<li>isBefore(date2)/isAfter(date2): checks if a date is before or after another date</li>
+</ul>
+<h2 id="localtime">LocalTime</h2>
+<p>The LocalTime represents time without a date.
+Similar to LocalDate an instance of LocalTime can be created from system clock or by using “parse” and “of” method. Quick look at some of the commonly used APIs below.</p>
+<pre><code class="language-java">LocalTime now = LocalTime.now();
+LocalTime sixThirty = LocalTime.parse(&quot;06:30&quot;);
+LocalTime sixThirty2 = LocalTime.of(6, 32);
+</code></pre>
+<p>Useful methods:</p>
+<pre><code class="language-java">long hoursBetween = ChronoUnit.HOURS.between(now1, now2);
+long minutesBetween = ChronoUnit.MINUTES.between(now1, now2);
+System.out.println(hoursBetween);       
+System.out.println(minutesBetween);
+</code></pre>
+<h2 id="localdatetime">LocalDateTime</h2>
+<p>The LocalDateTime is used to represent a combination of date and time.</p>
+<pre><code class="language-java">LocalDateTime.now();
+LocalDateTime.of(2020, Month.FEBRUARY, 20, 06, 30);
+LocalDateTime.parse(&quot;2020-02-20T06:30:00&quot;);
+</code></pre>
+<h2 id="datetimeformatter">DateTimeFormatter</h2>
+<p>The DateTimeFormatter provides various standard formatting options:</p>
+<ul>
+<li>y   = year   (yy or yyyy)</li>
+<li>M   = month  (MM)</li>
+<li>d   = day in month (dd)</li>
+<li>h   = hour (0-12)  (hh)</li>
+<li>H   = hour (0-23)  (HH)</li>
+<li>m   = minute in hour (mm)</li>
+<li>s   = seconds (ss)</li>
+<li>S   = milliseconds (SSS)</li>
+</ul>
+<p>Custom patterns can be provided to format method as well, like below, which would return a LocalDate as 2020/01/25</p>
+<pre><code class="language-java">LocalDateTime localDateTime = LocalDateTime.of(2020, Month.JANUARY, 25, 6, 30);
+localDateTime.format(DateTimeFormatter.ofPattern(&quot;yyyy/MM/dd&quot;));
+System.out.println(localDateTime);
+DateTimeFormatter formatter = DateTimeFormatter.BASIC_ISO_DATE;
+String formattedDate = formatter.format(LocalDate.now());
+System.out.println(formattedDate);
+</code></pre>
+<h2 id="examples">Examples</h2>
+<pre><code class="language-java">LocalDate avui = LocalDate.now();
+String avuiFormatat = avui.format(DateTimeFormatter.ofPattern(&quot;dd-MM-yyyy&quot;));
+System.out.println(avuiFormatat);
+LocalDate dema = avui.plusDays(1);
+boolean esTraspas = LocalDate.now().isLeapYear();
+
+LocalDateTime ara = LocalDateTime.now();
+String araFormatat = ara.format(DateTimeFormatter.ofPattern(&quot;dd-MM-yyyy HH:mm&quot;));
+System.out.println(araFormatat);
+
+LocalDate celebracio = LocalDate.of(2020, 02, 20);
+int diesEntremig = Period.between(celebracio, avui).getDays();
+LocalDateTime festa = LocalDateTime.of(2017, Month.FEBRUARY,3,6,30,40,50000);       
+System.out.println(festa);
+</code></pre>
+<p>More info:</p>
+<ul>
+<li><a href="https://github.com/winterbe/java8-tutorial#date-api">Link1</a></li>
+<li><a href="http://tutorials.jenkov.com/java-date-time/parsing-formatting-dates.html">Link2</a></li>
+<li><a href="https://www.baeldung.com/java-8-date-time-intro">Link3</a></li>
+</ul>
               
             </div>
           </div>

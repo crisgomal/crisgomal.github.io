@@ -176,15 +176,13 @@ System.out.println(sb.toString());
 System.out.printf(&quot;%4$2s %3$2s %2$2s %1$2s&quot;, &quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;) //prints &quot;d c b a&quot;
 </code></pre>
 <h2 id="examples">Examples</h2>
-<p><code>java
-String.format("%d", 15); //prints: 15
-String.format("%20d", 15); //right justify text:                  15                   
-String.format("%-20d", 15); //left justify text: 15 
-String.format("%020d", 15); //prints: 0000000000000000015 
-Date today = Calendar.getInstance().getTime();
-System.out.printf("%tc%n", today);
-System.out.printf("%tF", today);</code>
-<a href="https://dzone.com/articles/java-string-format-examples">More info</a></p>
+<pre><code class="language-java">String.format(&quot;%d&quot;, 15); //prints: 15
+String.format(&quot;%20d&quot;, 15); //right justify text:                  15                   
+String.format(&quot;%-20d&quot;, 15); //left justify text: 15 
+String.format(&quot;%020d&quot;, 15); //prints: 0000000000000000015 
+System.out.printf(&quot;%3$20s %1$10s %2$10s\n&quot;, &quot;Hora&quot;, &quot;Minut&quot;,&quot;Nom&quot;); //prints: Nom              Hora        Minut
+</code></pre>
+<p><a href="https://dzone.com/articles/java-string-format-examples">More info</a></p>
               
             </div>
           </div>
