@@ -159,11 +159,19 @@ LocalDate.parse(&quot;2020-02-20&quot;);
 <li>getDayOfWeek()</li>
 <li>getDayOfMonth()</li>
 <li>isBefore(date2)/isAfter(date2): checks if a date is before or after another date</li>
+<li>until(date2, unit): compare to dates, where unit can be ChronoUnit.DAYS, ChronoUnit.MONTHS, ChronoUnit.YEARS</li>
 </ul>
-<h2 id="localtime">LocalTime</h2>
-<p>The LocalTime represents time without a date.
-Similar to LocalDate an instance of LocalTime can be created from system clock or by using “parse” and “of” method. Quick look at some of the commonly used APIs below.</p>
-<pre><code class="language-java">LocalTime now = LocalTime.now();
+<p>The class Period also have a method called between that allows to compare to dates:</p>
+<pre><code class="language-java">int yearsBetween = Period.between(dataNaix, avui).getYears();
+````
+
+## LocalTime
+
+The LocalTime represents time without a date.
+Similar to LocalDate an instance of LocalTime can be created from system clock or by using “parse” and “of” method. Quick look at some of the commonly used APIs below.
+
+```java
+LocalTime now = LocalTime.now();
 LocalTime sixThirty = LocalTime.parse(&quot;06:30&quot;);
 LocalTime sixThirty2 = LocalTime.of(6, 32);
 </code></pre>
@@ -183,13 +191,14 @@ LocalDateTime.parse(&quot;2020-02-20T06:30:00&quot;);
 <p>The DateTimeFormatter provides various standard formatting options:</p>
 <ul>
 <li>y   = year   (yy or yyyy)</li>
-<li>M   = month  (MM)</li>
+<li>M   = month  (M for numbers without zero, MM for 2numbers and MMMM for the name of month)</li>
 <li>d   = day in month (dd)</li>
 <li>h   = hour (0-12)  (hh)</li>
 <li>H   = hour (0-23)  (HH)</li>
 <li>m   = minute in hour (mm)</li>
 <li>s   = seconds (ss)</li>
 <li>S   = milliseconds (SSS)</li>
+<li>E   = day of week (EEEE)</li>
 </ul>
 <p>Custom patterns can be provided to format method as well, like below, which would return a LocalDate as 2020/01/25</p>
 <pre><code class="language-java">LocalDateTime localDateTime = LocalDateTime.of(2020, Month.JANUARY, 25, 6, 30);
