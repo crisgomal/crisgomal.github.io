@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Branching - M3-Programming</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Branching";
+    var mkdocs_page_input_path = "3.3.branching.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> M3-Programming</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.1.introduction/">Intro</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.2.comments/">Comments</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.3.mainmethod/">Main method</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.4.variables/">Variables and Types</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.5.integer/">Integer</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.6.boolean/">Boolean</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.7.floatingpoint/">Floating point</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.8.math/">Math</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.9.character/">Character</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.10.typecasting/">Typecasting</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.11.format/">Format</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.12.string/">Strings</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.13.dates/">Dates</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../2.1.conditionals/">Conditionals</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../2.2.switch/">Switch-case</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../3.1.loops-while/">Loops while&do-while</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../3.2.loops-for/">For loops</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Branching</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#the-break-statement">The break statement</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#the-continue-statement">The continue statement</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">M3-Programming</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Branching</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="branching-statements">Branching statements</h1>
+<p>Branching statements are used to change the standard behavior of loops: terminate a loop or skip some iterations.</p>
+<h2 id="the-break-statement">The break statement</h2>
+<p>The break statement has two usages:</p>
+<ul>
+<li>it terminates the current loop (any kind) of any types (for, while, do-while); </li>
+<li>it terminates a case in the switch statement;</li>
+</ul>
+<p>In this topic, we will learn the application of the statement to terminate loops.
+Here is an example:</p>
+<pre><code class="language-java">int i = 10;
+while(true) {
+    if (i == 0) {
+        break;
+    }
+    i--;
+}
+</code></pre>
+<p>This loop will be successfully stopped, even though the condition is always true.
+The break statement terminates only the current loop. If this loop is inside another loop, the outer loop won't be stopped.
+The following code prints a ladder of numbers.</p>
+<pre><code class="language-java">for (int i = 0; i &lt; 10; i++) {
+    for (int j = 0; j &lt; 10; j++) {
+        System.out.print(j + &quot; &quot;);
+        if (i == j) {
+            break;
+        }
+    }
+    System.out.println();
+}
+</code></pre>
+<p>The break statement can't stop the outer loop (with variable i) and the code prints:</p>
+<pre><code class="language-java">0 
+0 1 
+0 1 2 
+0 1 2 3 
+0 1 2 3 4 
+0 1 2 3 4 5 
+0 1 2 3 4 5 6 
+0 1 2 3 4 5 6 7 
+0 1 2 3 4 5 6 7 8 
+0 1 2 3 4 5 6 7 8 9
+</code></pre>
+<p>To stop the outer loop we'd like to declare boolean variable stopped and use it as a special flag.</p>
+<pre><code class="language-java">boolean stopped = false;
+for (int i = 0; (i &lt; 10) &amp;&amp; !stopped; i++) {
+    for (int j = 0; j &lt; 10; j++) {
+        System.out.print(j + &quot; &quot;);
+        if (i == j) {
+            stopped = true;
+            break;
+        }
+     }
+    System.out.println();
+}
+</code></pre>
+<p>Now, the program output is not the same.
+Also, another way to stop the outer loop exist - labeled break operator. But it's not very good practice to use it. Google it, if you are interested.</p>
+<h2 id="the-continue-statement">The continue statement</h2>
+<p>It causes a loop to skip the current iteration and go to the next one.
+This statement also can be used inside any kinds of loops.</p>
+<ul>
+<li>inside the for-loop, the continue cases control to immediately move to the increment/decrement statement;</li>
+<li>inside the while or do-while loop, control immediately move to the condition.</li>
+</ul>
+<p>In the following example, the sequences of number are output. Odd numbers are skipped.</p>
+<pre><code class="language-java">int n = 10;
+for (int i = 0; i &lt; n; i++) {
+    if (i % 2 != 0) {
+        continue;
+    }
+    System.out.print(i + &quot; &quot;);
+}
+</code></pre>
+<p>The output:</p>
+<pre><code class="language-java">0 2 4 6 8
+</code></pre>
+<p>The continue can't skip the current iteration of the outer loop.</p>
+<p>Often, we can rewrite our loop without using the continue statement. Here is an example:</p>
+<pre><code class="language-java">int n = 10;
+for (int i = 0; i &lt; n; i++) { 
+    if (i % 2 == 0) {
+        System.out.print(i + &quot; &quot;);
+    } 
+}
+</code></pre>
+<p>The result is the same as shown above but the code became shorter and more readable. Do not abuse branching statements.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../3.2.loops-for/" class="btn btn-neutral" title="For loops"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../3.2.loops-for/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

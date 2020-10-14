@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Loops while&do-while - M3-Programming</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Loops while&do-while";
+    var mkdocs_page_input_path = "3.1.loops-while.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> M3-Programming</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.1.introduction/">Intro</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.2.comments/">Comments</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.3.mainmethod/">Main method</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.4.variables/">Variables and Types</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.5.integer/">Integer</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.6.boolean/">Boolean</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.7.floatingpoint/">Floating point</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.8.math/">Math</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.9.character/">Character</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.10.typecasting/">Typecasting</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.11.format/">Format</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.12.string/">Strings</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../1.13.dates/">Dates</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../2.1.conditionals/">Conditionals</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../2.2.switch/">Switch-case</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Loops while&do-while</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#the-while-loop">The while loop</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#examples-while">Examples while</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#the-do-while-loop">The do-while loop</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#examples-do-while">Examples do-while</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#links">Links</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../3.2.loops-for/">For loops</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../3.3.branching/">Branching</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">M3-Programming</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Loops while&do-while</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="while-and-do-while-loops">While and do-while loops</h1>
+<p>Java provides several kinds of loops for repeating a block of code while a certain condition is true. In this topic, we will learn about two kinds of loops: while and do-while. The difference between them is the order in which the body is executed and the condition is evaluated.</p>
+<h2 id="the-while-loop">The while loop</h2>
+<p>In a while loop, the condition is tested first. The body is only executed if the condition is true, and then the process repeats. 
+The basic syntax of this loop is the following:</p>
+<pre><code class="language-java">while (condition) {
+    // do something in the body
+}
+</code></pre>
+<p><img alt="whileLoop" src="../img/while.png" />
+The body of the loop may contain any valid Java statements, including conditional statements and even other loops (nested loops). 
+A loop becomes an infinite loop if the condition is always true. For example: </p>
+<pre><code class="language-java">while (true) {
+    // infinite loop
+}
+</code></pre>
+<p>We will talk more about using infinite loops in later topics.</p>
+<h3 id="examples-while">Examples while</h3>
+<p>Example 1. The following loop prints consecutive integer numbers until reaching 5.</p>
+<pre><code class="language-java">int i = 0;
+while (i &lt; 5) {
+    System.out.println(i);
+    i++;
+}
+</code></pre>
+<p>The output:</p>
+<pre><code class="language-java">0
+1
+2
+3
+4
+</code></pre>
+<p>Example 2. The following code prints the English alphabet in a single line.</p>
+<pre><code class="language-java">public class WhileDemo {
+    public static void main(String[] args) {
+        char letter = 'A';
+        while (letter &lt;= 'Z') {
+            System.out.print(letter);
+            letter++;
+        }
+    }
+}
+</code></pre>
+<p>Here's what's happening: the program takes the first character, 'A', and then repeats:if letter is less than or equal to 'Z', the program goes to the loop body; inside the body, it prints the current value of letter and moves on to the next.
+The output:</p>
+<pre><code class="language-java">ABCDEFGHIJKLMNOPQRSTUVWXYZ
+</code></pre>
+<p>Example 3. Loop to calculate the factorial of a number</p>
+<pre><code class="language-java">Scanner in = new Scanner(System.in);
+System.out.println(&quot;Introdueix un número&quot;);
+int num = in.nextInt();
+int fact = 1;
+while (num &gt; 0) {
+  fact = fact*num;
+  num--;
+}
+System.out.println(&quot;Factorial = &quot; + fact);
+</code></pre>
+<h2 id="the-do-while-loop">The do-while loop</h2>
+<p>In a do-while loop, the body is executed first and only then is the condition statement tested. Therefore, the body will be always executed at least once.</p>
+<p>The basic syntax of the loop is the following: </p>
+<pre><code class="language-java">do {
+    // do something
+} while (condition);
+</code></pre>
+<p><img alt="doWhileLoop" src="../img/dowhile.png" /></p>
+<h3 id="examples-do-while">Examples do-while</h3>
+<p>Example 1. The program below keeps reading integer numbers from standard input and outputting them. If 0 is entered, the program outputs it and stops. </p>
+<pre><code class="language-java">public class DoWhileDemo {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int value;
+        do {
+            value = scanner.nextInt();
+            System.out.println(value);
+        } while (value &gt; 0);
+    }
+}
+</code></pre>
+<p>The input:</p>
+<pre><code class="language-java">1 2 4 0 3
+</code></pre>
+<p>The output:</p>
+<pre><code class="language-java">1
+2
+4
+0
+</code></pre>
+<p>Example 2. Do-while loop to calculate the sum of the first X integers (where X is provided by the user)</p>
+<pre><code class="language-java">Scanner in = new Scanner(System.in);
+
+int sum = 0;
+int num;
+do {
+  System.out.println(&quot;Introdueix un número&quot;);
+  num = in.nextInt();
+  sum + = num;
+} while (num != 0);
+System.out.println(&quot;Suma = &quot; + sum);
+</code></pre>
+<p>Note that a do-while loop may become infinite, just like a while loop.</p>
+<h2 id="links">Links</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=jsUN0NV5RfQ&amp;ab_channel=Code.org">Explanation DO-WHILE by Chris Bosh</a></li>
+<li><a href="https://www.youtube.com/watch?v=hYvcoRkAkOU&amp;ab_channel=Code.org">Explanation WHILE by Marc Zuckerberg</a></li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../3.2.loops-for/" class="btn btn-neutral float-right" title="For loops">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../2.2.switch/" class="btn btn-neutral" title="Switch-case"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../2.2.switch/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../3.2.loops-for/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
