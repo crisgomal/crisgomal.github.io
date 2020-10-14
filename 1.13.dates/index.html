@@ -106,7 +106,23 @@
                     </li>
                 </ul>
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../3.1.conditionals/">Conditionals</a>
+                    <li class="toctree-l1"><a class="reference internal" href="../2.1.conditionals/">Conditionals</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../2.2.switch/">Switch-case</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../3.1.loops-while/">Loops while&do-while</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../3.2.loops-for/">For loops</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../3.3.branching/">Branching</a>
                     </li>
                 </ul>
       </div>
@@ -163,15 +179,11 @@ LocalDate.parse(&quot;2020-02-20&quot;);
 </ul>
 <p>The class Period also have a method called between that allows to compare to dates:</p>
 <pre><code class="language-java">int yearsBetween = Period.between(dataNaix, avui).getYears();
-````
-
-## LocalTime
-
-The LocalTime represents time without a date.
-Similar to LocalDate an instance of LocalTime can be created from system clock or by using “parse” and “of” method. Quick look at some of the commonly used APIs below.
-
-```java
-LocalTime now = LocalTime.now();
+</code></pre>
+<h2 id="localtime">LocalTime</h2>
+<p>The LocalTime represents time without a date.
+Similar to LocalDate an instance of LocalTime can be created from system clock or by using “parse” and “of” method. Quick look at some of the commonly used APIs below.</p>
+<pre><code class="language-java">LocalTime now = LocalTime.now();
 LocalTime sixThirty = LocalTime.parse(&quot;06:30&quot;);
 LocalTime sixThirty2 = LocalTime.of(6, 32);
 </code></pre>
@@ -202,8 +214,8 @@ LocalDateTime.parse(&quot;2020-02-20T06:30:00&quot;);
 </ul>
 <p>Custom patterns can be provided to format method as well, like below, which would return a LocalDate as 2020/01/25</p>
 <pre><code class="language-java">LocalDateTime localDateTime = LocalDateTime.of(2020, Month.JANUARY, 25, 6, 30);
-localDateTime.format(DateTimeFormatter.ofPattern(&quot;yyyy/MM/dd&quot;));
-System.out.println(localDateTime);
+String printedLocalDateTime = localDateTime.format(DateTimeFormatter.ofPattern(&quot;yyyy/MM/dd&quot;));
+System.out.println(printedLocalDateTime);
 DateTimeFormatter formatter = DateTimeFormatter.BASIC_ISO_DATE;
 String formattedDate = formatter.format(LocalDate.now());
 System.out.println(formattedDate);
@@ -237,7 +249,7 @@ System.out.println(festa);
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../3.1.conditionals/" class="btn btn-neutral float-right" title="Conditionals">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../2.1.conditionals/" class="btn btn-neutral float-right" title="Conditionals">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../1.12.string/" class="btn btn-neutral" title="Strings"><span class="icon icon-circle-arrow-left"></span> Previous</a>
@@ -269,7 +281,7 @@ System.out.println(festa);
         <span><a href="../1.12.string/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../3.1.conditionals/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../2.1.conditionals/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
