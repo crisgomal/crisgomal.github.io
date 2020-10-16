@@ -113,6 +113,20 @@
     <li class="toctree-l2"><a class="reference internal" href="#how-to-compare-strings-correctly">How to compare strings correctly?</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#regular-expressions">Regular Expressions</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#what-is-a-regex">What is a RegEx?</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#symbols">Symbols</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#samples">Samples</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#regex-in-java">RegEx in Java</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#useful-links">Useful Links</a>
+    </li>
+        </ul>
     </li>
     </ul>
                     </li>
@@ -288,6 +302,15 @@ System.out.println(second.equalsIgnoreCase(secondInUpperCase)); // true, it igno
 </code></pre>
 <p>Do not forget the rules when comparing strings.</p>
 <h2 id="regular-expressions">Regular Expressions</h2>
+<h3 id="what-is-a-regex">What is a RegEx?</h3>
+<p>A regular expression (shortened as regex) is a <strong>sequence of characters that define a search pattern</strong>. Usually such patterns are used by string-searching algorithms for "find" or "find and replace" operations on strings, or for input validation.
+Regular expressions are used in search engines, search and replace dialogs of word processors and text editors, in text processing utilities such as sed and AWK and in lexical analysis. Many programming languages provide regex capabilities either built-in or via libraries.</p>
+<h2 id="symbols">Symbols</h2>
+<p><img alt="Symbols1" src="regEx-symbols1.png" />
+<img alt="Symbols2" src="regEx-symbols2.png" /></p>
+<h3 id="samples">Samples</h3>
+<p><img alt="Samples" src="regEx-samples.png" /></p>
+<h3 id="regex-in-java">RegEx in Java</h3>
 <p>Here is a simple java regex example that uses a regular expression to check if a text contains the substring http:// :</p>
 <pre><code class="language-java">String text    =
         &quot;This is the text to be searched &quot; +
@@ -299,8 +322,15 @@ System.out.println(&quot;matches = &quot; + matches);
 <p>The text variable contains the text to be checked with the regular expression.</p>
 <p>The pattern variable contains the regular expression as a String. The regular expression matches all texts which contains one or more characters (.<em>) followed by the text http:// followed by one or more characters (.</em>).</p>
 <p>The third line uses the Pattern.matches() static method to check if the regular expression (pattern) matches the text. If the regular expression matches the text, then Pattern.matches() returns true. If the regular expression does not match the text Pattern.matches() returns false.</p>
-<p>The example does not actually check if the found http:// string is part of a valid URL, with domain name and suffix (.com, .net etc.). The regular expression just checks for an occurrence of the string http://.
-More info about <a href="https://files.jrebel.com/pdf/zt_regular-expressions-cheat-sheet.pdf">RegEx</a></p>
+<p>The example does not actually check if the found http:// string is part of a valid URL, with domain name and suffix (.com, .net etc.). The regular expression just checks for an occurrence of the string http://.</p>
+<h3 id="useful-links">Useful Links</h3>
+<ul>
+<li>[Great game online about RegEx] (https://regexcrossword.com/)</li>
+<li>[Tester Online] (https://regex101.com/)</li>
+<li>[Cheat sheet] (http://www.rexegg.com/regex-quickstart.html)</li>
+<li><a href="https://files.jrebel.com/pdf/zt_regular-expressions-cheat-sheet.pdf">Cheat sheet in Java</a></li>
+<li><a href="https://cs.uwaterloo.ca/~dtompkin/teaching/08a/lab7/">More examples</a></li>
+</ul>
               
             </div>
           </div>
