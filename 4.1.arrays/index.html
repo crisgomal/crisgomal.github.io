@@ -9,7 +9,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Introduction - M3-Programming</title>
+  <title>Arrays - M3-Programming</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -18,7 +18,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Introduction";
+    var mkdocs_page_name = "Arrays";
     var mkdocs_page_input_path = "4.1.arrays.md";
     var mkdocs_page_url = null;
   </script>
@@ -123,6 +123,62 @@
                     <li class="toctree-l1"><a class="reference internal" href="../3.3.branching/">Branching</a>
                     </li>
                 </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Arrays</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#1st-step-declaration-instantiation-initialization">1st Step: Declaration, instantiation, initialization</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#declaration">Declaration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#creating-an-array-with-the-specified-elements">Creating an array with the specified elements</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#creating-an-array-using-the-keyword-new">Creating an array using the keyword "new"</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#where-to-place">Where to place []?</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#the-length-of-an-array">The length of an array</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#2nd-step-access">2nd Step: Access</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#specific-element-by-index">Specific element by index</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#all-elements-by-loops">All elements by loops</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#alternative-for-each-loop">Alternative: For-each loop</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#class-arrays">Class Arrays</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#samples">Samples</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#example-1">Example 1</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-2">Example 2</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-3">Example 3</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#example-4">Example 4</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../4.2.strings/">Strings</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../4.3.arrays-multi/">Multi-dimensional Arrays</a>
+                    </li>
+                </ul>
       </div>
     </div>
     </nav>
@@ -144,7 +200,7 @@
     
       
     
-    <li>Introduction</li>
+    <li>Arrays</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -155,25 +211,278 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="introduction">Introduction</h1>
-<p><a href="https://www.tiobe.com/tiobe-index/">TIOBE index</a></p>
-<h2 id="short-history">Short history</h2>
-<p>```java
-class Task {
-  public static void main(String[] args) {
-    // The line below will be ignored
-    // System.out.println("Hello, World");</p>
-<pre><code>// It prints the string "Hello, Java"
-System.out.println("Hello, Java"); // You can write a comment here
+                <h1 id="arrays">Arrays</h1>
+<p>An array is an ordered collection of elements of the same type. It can store only a fixed number of elements. The length of an array is established when the array is created. Arrays allow you to group and processing similar data together.
+In the following picture, an array of five floating-point elements is presented.</p>
+<p><img alt="Array" src="../img/array.jpg" /></p>
+<p>An array of five int elements</p>
+<p>Some features:</p>
+<ul>
+<li>an array is a reference type; </li>
+<li>all elements are stored in the memory sequentially ; </li>
+<li>each element of an array is accessed by its numerical index, the first element has the index 0;</li>
+<li>the last element is accessed by the index equal to array size - 1;</li>
+<li>it's possible to create an array of any types;</li>
+<li>the maximum size of an array is limited by the Integer.MAX_VALUE; </li>
+</ul>
+<h2 id="1st-step-declaration-instantiation-initialization">1st Step: Declaration, instantiation, initialization</h2>
+<p>To create an array filled with useful elements we should:</p>
+<ol>
+<li>declare a variable of an array type (declaration); </li>
+<li>create an instance of the array object (instantiation);</li>
+<li>initialize the array by some values (initialization).</li>
+</ol>
+<h3 id="declaration">Declaration</h3>
+<p>To declare an array we must use two special characters [] after the name of the type of elements in the array:</p>
+<pre><code class="language-java">int[] array; // declaration
+ ```
+or after the name of an array variable:
+```java
+int array[]; // declaration
 </code></pre>
-<p>}
+<h3 id="creating-an-array-with-the-specified-elements">Creating an array with the specified elements</h3>
+<p>Java provides several ways to create an array.
+The simplest way to instantiate and initialize an array is to enumerate all its elements: </p>
+<pre><code class="language-java">int[] numbers = { 1, 2, 3, 4 }; // an array of 1, 2, 3, 4
+</code></pre>
+<p>But, this way to create an array has some disadvantages: we need to know values and number of elements at the moment of compilation.</p>
+<p>Another way is to initialize an array using variables:</p>
+<pre><code class="language-java">int a = ..., b = ..., c = ...;
+int[] numbers = { a, b, c };
+</code></pre>
+<p>In this case, we should have all elements at the moment of the array creation.</p>
+<h3 id="creating-an-array-using-the-keyword-new">Creating an array using the keyword "new"</h3>
+<p>The most general way to create an instance (object) of an array is to use the special keyword new and specify the necessary number of elements: </p>
+<pre><code class="language-java">int n = ...; // n is a length of an array
+int[] numbers = new int[n];
+</code></pre>
+<p>Now, the array has n elements. Each element is equal to 0 (the default value). Next, we should make explicit initialization of elements.
+It's possible to separate declaration and instantiation in two lines:</p>
+<pre><code class="language-java">int[] numbers;
+numbers = new int[n];
+</code></pre>
+<p>Also, we can write the keyword new and enumerate all elements of an array:</p>
+<pre><code class="language-java">float[] floatNumbers; // declaration 
+floatNumbers = new float[] { 1.02f, 0.03f, 4f } // instantiation and initialization
+</code></pre>
+<h4 id="where-to-place">Where to place []?</h4>
+<p>Another feature associated with the creating of arrays is the location of characters []. </p>
+<pre><code class="language-java">char[] chars1 = new char[n]; // [] after the type
+char chars2[] = new char[n]; // [] after the variable
+</code></pre>
+<p>Often, Java developers use the first way because it signals that an array is a special type.</p>
+<h4 id="the-length-of-an-array">The length of an array</h4>
+<p>To obtain the length of an existing array we should write arrayName.length. It returns the length of the array. Here is an example:</p>
+<pre><code class="language-java">int[] array = { 1, 2, 3, 4 }; // an array of numbers
+int length = array.length; // number of elements of the array
+System.out.println(length); // 4
+</code></pre>
+<h2 id="2nd-step-access">2nd Step: Access</h2>
+<h3 id="specific-element-by-index">Specific element by index</h3>
+<p>The values of elements of an array can be changed. To set (get) a value to (from) array the index is used.
+Set the value by the index:</p>
+<pre><code class="language-java">array[index] = val;
+</code></pre>
+<p>Get the value by the index</p>
+<pre><code class="language-java">val = array[index];
+</code></pre>
+<p>Indexes of an array have numbers from 0 to length - 1 inclusive.
+Let's see an example. </p>
+<pre><code class="language-java">int numbers[] = new int[3]; // numbers: [0, 0, 0]
+numbers[0] = 1; // numbers: [1, 0, 0]
+numbers[1] = 2; // numbers: [1, 2, 0]
+numbers[2] = numbers[0] + numbers[1]; // numbers: [1, 2, 3]
+</code></pre>
+<p>Some explanations:</p>
+<ul>
+<li>in the first line, the integer array named numbers with the size 3 is created. By default, all elements are equal to 0; </li>
+<li>in the second line, the value "1" is assigned to the first element of the array by its index (do not forget, the first element has the index 0); </li>
+<li>in the third line, the value "2" is assigned to the second element of the array by its index (numbers[1] - is the second element); </li>
+<li>in the last line, the sum of first two elements is assigned to the third element by its index. 
+Note, if we try to access a non-existing element by an index then a runtime exception happens. 
+For instance, let's try to get fourth element (with index 3) of the considered array numbers.</li>
+</ul>
+<pre><code class="language-java">int elem = numbers[3];
+</code></pre>
+<p>The program throws ArrayIndexOutOfBoundsException.
+Be careful with indexes when accessing elements of an array.</p>
+<h3 id="all-elements-by-loops">All elements by loops</h3>
+<p>Often, it's needed to perform some kind of algorithms on the elements of an array. For instances: sort them, find the maximum element, print only positive numbers, reverse the order, calculate the arithmetic average of numbers and so on. 
+A convenient way to process an array is to iterate over the array using a loop. The property length of an array can help us to avoid ArrayIndexOutOfBoundsException.
+Example 1. Filling an array with the squares of indexes. </p>
+<pre><code class="language-java">int n = 10; // the size of an array
+int[] squares = new int[n]; // creating an array with the specified size
+
+System.out.println(Arrays.toString(squares)); // [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+/* iterating over the array */
+for (int i = 0; i &lt; squares.length; i++) {
+    squares[i] = i * i; // set the value by the element index 
 }
-``
-<img alt="Invalid" src="../img/java2.png" /></p>
+
+System.out.println(Arrays.toString(squares)); // [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+</code></pre>
+<p>Some explanations. In the code above an array with the size 10 is created (filled with 0). Then each element of the array is set to the square of the element's index. Then the array is output to the standard output.
+Example 2. Checking the order of elements. 
+The following program checks the given array is sorted ascending and prints "OK", otherwise it prints "BROKEN".</p>
+<pre><code class="language-java">int[] numbers = { 1, 2, 3, 4, 5, 10, 6 }; // the order is broken
+
+boolean broken = false; // suppose the array is well-ordered
+
+/* iterating over the array */
+for (int i = 1; i &lt; numbers.length; i++) {
+
+    if (numbers[i] &lt; numbers[i - 1]) { // if the order is broken
+        broken = true; // write a result
+        break;         // terminate the loop
+    }
+}
+
+System.out.println(broken ? &quot;BROKEN&quot; : &quot;OK&quot;);
+</code></pre>
+<p>For the given array the program prints "BROKEN".
+To iterate over arrays while and do-while loops are also admissible, but they are used less often.</p>
+<h4 id="alternative-for-each-loop">Alternative: For-each loop</h4>
+<p>Since Java 5 there is a special kind of the for loop called for-each. It is a special kind of the for-loop that iterates arrays and collections (they will be learned in other topics) without using indexes.
+Let's write a code for calculating the number of 'a' letter in the given character array. To iterate over the array we'll use for-each loop.</p>
+<pre><code class="language-java">char[] characters = { 'a', 'b', 'c', 'a', 'b', 'c', 'a' };
+
+int counter = 0;
+for (char ch : characters) {
+    if (ch == 'a') {
+        counter++;
+    }
+}
+
+System.out.println(counter); // it outputs &quot;3&quot;
+</code></pre>
+<p>As you can see, the absence of indexes makes the code more readable. It also allows you to avoid ArrayIndexOutOfBoundsException.</p>
+<h2 id="class-arrays">Class Arrays</h2>
+<p>The class provides a lot of very useful methods for processing arrays.
+convert array to string using Arrays.toString(...) and then print it:</p>
+<pre><code class="language-java">byte[] famousNumbers = { 0, 1, 2, 4, 8, 16, 32, 64 };
+System.out.println(Arrays.toString(famousNumbers)); // it prints [0, 1, 2, 4, 8, 16, 32, 64]
+</code></pre>
+<p>sorting a whole array or a part of it:</p>
+<pre><code class="language-java">long[] bigNumbers = { 20000000000L, 40000000000L, 10000000000L, 30000000000L }; // it's unsorted
+
+Arrays.sort(bigNumbers); // sorting whole array
+
+// it prints [10000000000, 20000000000, 30000000000, 40000000000]
+System.out.println(Arrays.toString(bigNumbers));
+comparing arrays: two arrays are equal if they contain the same elements in the same order:
+```java
+int[] numbers1 = { 1, 2, 5, 8 };
+int[] numbers2 = { 1, 2, 5 };
+int[] numbers3 = { 1, 2, 5, 8 };
+
+System.out.println(Arrays.equals(numbers1, numbers2)); // it prints &quot;false&quot;
+System.out.println(Arrays.equals(numbers1, numbers3)); // it prints &quot;true&quot;
+filling a whole array or a part of it by some values:
+int size = 10;
+char[] characters = new char[size];
+
+// It takes an array, start index, end index (exclusive) and the value for filling the array
+Arrays.fill(characters, 0, size / 2, 'A'); 
+Arrays.fill(characters, size / 2, size, 'B');
+
+System.out.println(Arrays.toString(characters)); // it prints [A, A, A, A, A, B, B, B, B, B]
+</code></pre>
+<p>Of course, the class contains a lot of other useful methods, including array copying, binary search in sorted array and so on. For details see <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Arrays.html">here</a></p>
+<h2 id="samples">Samples</h2>
+<h3 id="example-1">Example 1</h3>
+<pre><code class="language-java">public class Main {
+
+    public static void main(String[] args) {
+
+      int[] array = { 1, 2, 3, 4 }; 
+      int length = array.length; 
+      System.out.println(length); 
+      System.out.println(array[2]);
+    }
+}
+</code></pre>
+<h3 id="example-2">Example 2</h3>
+<pre><code class="language-java">import java.util.Scanner;
+import java.util.Arrays;
+
+
+public class ReadingArrayExample {
+    
+    public static void main(String args[]) {
+        
+        Scanner scanner = new Scanner(System.in);
+        
+        int len = scanner.nextInt(); // reading a length
+        int[] array = new int[len];  // creating an array with the specified length
+        
+        for (int i = 0; i &lt; len; i++) {
+            array[i] = scanner.nextInt(); // read the next number of the array
+        }
+        System.out.println(Arrays.toString(array)); // output the array
+    }
+}
+</code></pre>
+<h3 id="example-3">Example 3</h3>
+<pre><code class="language-java">import java.util.Arrays;
+
+public class WritingArrayExample {
+
+    public static void main(String[] args) {
+
+      int[] llista  = {1,2,3};
+      String[] llista2 = {&quot;correr&quot;, &quot;menjar&quot;};
+      //Option 1: for-each
+      for (int i : llista) {
+        System.out.print(i + &quot; &quot;);
+      }
+      System.out.println();
+
+      //Option 2: toString de la classe Arrays)
+      System.out.println(Arrays.toString(llista));
+
+      //Option 3: classic for
+      for (int i = 0; i &lt; llista.length; i++) {
+        System.out.print(llista[i] + &quot; &quot;);
+      }
+      System.out.println();
+    }
+}
+</code></pre>
+<h3 id="example-4">Example 4</h3>
+<pre><code class="language-java">
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+
+      Scanner scan = new Scanner(System.in);
+      System.out.println(&quot;Enter number of students:&quot;);
+      int n = scan.nextInt();
+      int[] marks = new int[n];
+      int sum=0;
+      for(int i=0; i &lt; n; i++){
+        System.out.println(&quot;Enter marks of student &quot; + (i+1) +&quot;:&quot;);
+        marks[i] = scan.nextInt();
+        sum+=marks[i];
+      }
+      System.out.println(&quot;Mitjana : &quot; + (float)sum/n);
+    }
+}
+</code></pre>
               
             </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../4.2.strings/" class="btn btn-neutral float-right" title="Strings">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../3.3.branching/" class="btn btn-neutral" title="Branching"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -197,6 +506,10 @@ System.out.println("Hello, Java"); // You can write a comment here
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
+        <span><a href="../3.3.branching/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../4.2.strings/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

@@ -9,7 +9,7 @@
   
   
   <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>Introduction - M3-Programming</title>
+  <title>Strings - M3-Programming</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
 
   <link rel="stylesheet" href="../css/theme.css" />
@@ -18,7 +18,7 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Introduction";
+    var mkdocs_page_name = "Strings";
     var mkdocs_page_input_path = "4.2.strings.md";
     var mkdocs_page_url = null;
   </script>
@@ -123,6 +123,22 @@
                     <li class="toctree-l1"><a class="reference internal" href="../3.3.branching/">Branching</a>
                     </li>
                 </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../4.1.arrays/">Arrays</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Strings</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#iterating-over-a-string">Iterating over a string</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../4.3.arrays-multi/">Multi-dimensional Arrays</a>
+                    </li>
+                </ul>
       </div>
     </div>
     </nav>
@@ -144,7 +160,7 @@
     
       
     
-    <li>Introduction</li>
+    <li>Strings</li>
     <li class="wy-breadcrumbs-aside">
       
     </li>
@@ -155,25 +171,61 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="introduction">Introduction</h1>
-<p><a href="https://www.tiobe.com/tiobe-index/">TIOBE index</a></p>
-<h2 id="short-history">Short history</h2>
-<p>```java
-class Task {
-  public static void main(String[] args) {
-    // The line below will be ignored
-    // System.out.println("Hello, World");</p>
-<pre><code>// It prints the string "Hello, Java"
-System.out.println("Hello, Java"); // You can write a comment here
+                <h1 id="strings-and-arrays">Strings and arrays</h1>
+<p>Sometimes, a string looks similar to an array of characters.
+It's possible to convert between strings and character arrays using special methods:</p>
+<pre><code class="language-java">char[] chars = { 'A', 'B', 'C', 'D', 'E', 'F' };
+
+String stringFromChars = String.valueOf(chars); // &quot;ABCDEF&quot;
+
+char[] charsFromString = stringFromChars.toCharArray(); // { 'A', 'B', 'C', 'D', 'E', 'F' }
+
+String theSameString = new String(stringFromChars); // &quot;ABCDEF&quot;
 </code></pre>
-<p>}
+<p>A string can be separated by delimiters to an array of strings. To perform this, call the method split.</p>
+<pre><code class="language-java">String text = &quot;a long text&quot;;
+String[] parts = text.split(&quot; &quot;); // [a, long, text]
+</code></pre>
+<p>The method also can take a regular expression.</p>
+<h2 id="iterating-over-a-string">Iterating over a string</h2>
+<p>It's possible to iterate over characters of a string using a loop (while, do-while, for-loop). 
+See the following example. </p>
+<pre><code class="language-java">String scientistName = &quot;Isaac Newton&quot;;
+
+for (int i = 0; i &lt; scientistName.length(); i++) {
+    System.out.print(scientistName.charAt(i) + &quot; &quot;); // print the current character
 }
-``
-<img alt="Invalid" src="../img/java2.png" /></p>
+</code></pre>
+<p>The code outputs:</p>
+<pre><code class="language-java">I s a a c   N e w t o n
+</code></pre>
+<p>If you'd like to use the for-each loop, first you should convert a string to an array of characters and iterate it. </p>
+<pre><code class="language-java">String str = &quot;strings are not primitive types!&quot;;
+
+int count = 0;
+for (char ch : str.toCharArray()) {
+    if (ch == ' ') {
+        count++;
+    }
+}
+
+
+System.out.println(count); // 4
+</code></pre>
+<p>The code above counts and prints the number of spaces in str. The result is 4.</p>
               
             </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../4.3.arrays-multi/" class="btn btn-neutral float-right" title="Multi-dimensional Arrays">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../4.1.arrays/" class="btn btn-neutral" title="Arrays"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
@@ -197,6 +249,10 @@ System.out.println("Hello, Java"); // You can write a comment here
     <span class="rst-current-version" data-toggle="rst-current-version">
       
       
+        <span><a href="../4.1.arrays/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../4.3.arrays-multi/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
