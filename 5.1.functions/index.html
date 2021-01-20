@@ -138,11 +138,13 @@
                 <ul class="current">
                     <li class="toctree-l1 current"><a class="reference internal current" href="./">Functions</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#functions-created-by-the-developer">Functions created by the developer</a>
+    </li>
     <li class="toctree-l2"><a class="reference internal" href="#structure">Structure</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#advantages">Advantages</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#example">Example</a>
+    <li class="toctree-l2"><a class="reference internal" href="#sample">Sample</a>
     </li>
     </ul>
                     </li>
@@ -189,8 +191,9 @@
               
                 <h1 id="what-is-a-function">What is a function?</h1>
 <p>A function is a set of instructions grouped together to perform a specific task.</p>
-<p>A program in Java has at least one main () function.</p>
-<p>Basically, there are two types of functions in Java, those of libraries (which are imported and used, such as: println, sqrt, round, nextLine ...) and those that are created by the user. The ones we will work on in this blog are the ones created by the user.</p>
+<p>A program in Java has at least function. This is the <strong>main</strong> function.</p>
+<p>Basically, there are two types of functions in Java, those of libraries (which are imported and used, such as: println, sqrt, round, nextLine ...) and those that are created by the user(developer). The ones we will work on in this block are the ones created by the user.</p>
+<h2 id="functions-created-by-the-developer">Functions created by the developer</h2>
 <p>Its syntax is as follows:</p>
 <pre><code class="language-java">private static void function_name(){
    ................
@@ -206,22 +209,22 @@ public static void main(String[] args){
 </code></pre>
 <h2 id="structure">Structure</h2>
 <p>To work with functions in Java we need:</p>
-<p>The creation of the function itself (contains the code to perform the task):</p>
+<p>The creation of the function (it contains the code to perform the task):</p>
 <pre><code class="language-java">private static return_type function_name (type (1) argument (1), .., type (n) argument (n))
 {
   // body of function
 }
 </code></pre>
-<p>Your call within the main or other function (to use it):</p>
+<p>The call within the main or other function to use it:</p>
 <pre><code class="language-java">function_name (argument (1), .... argument (n));
 </code></pre>
 <h2 id="advantages">Advantages</h2>
 <ul>
-<li>They help break down the problem into small blocks of code that are easier to understand, maintain, and debug.</li>
+<li>They help to break down the problem into small blocks of code that are easier to understand, maintain, and debug.</li>
 <li>They avoid code redundancy if it has to be repeated.</li>
 <li>The workload can be divided into different functions.</li>
 </ul>
-<h2 id="example">Example</h2>
+<h2 id="sample">Sample</h2>
 <pre><code class="language-java">import java.util.Scanner;
 public class Example {
   private static int add (int a, int b) {// function declarator
