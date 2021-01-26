@@ -195,14 +195,14 @@
 <p>Basically, there are two types of functions in Java, those of libraries (which are imported and used, such as: println, sqrt, round, nextLine ...) and those that are created by the user(developer). The ones we will work on in this block are the ones created by the user.</p>
 <h2 id="functions-created-by-the-developer">Functions created by the developer</h2>
 <p>Its syntax is as follows:</p>
-<pre><code class="language-java">private static void function_name(){
+<pre><code class="language-java">private static void functionName(){
    ................
    ................
 }
 public static void main(String[] args){
    ...........
    ...........
-  function_name();
+  functionName();
    ...........
    ...........
 }
@@ -210,13 +210,13 @@ public static void main(String[] args){
 <h2 id="structure">Structure</h2>
 <p>To work with functions in Java we need:</p>
 <p>The creation of the function (it contains the code to perform the task):</p>
-<pre><code class="language-java">private static return_type function_name (type (1) argument (1), .., type (n) argument (n))
+<pre><code class="language-java">private static returnType functionName (type (1) argument (1), .., type (n) argument (n))
 {
   // body of function
 }
 </code></pre>
 <p>The call within the main or other function to use it:</p>
-<pre><code class="language-java">function_name (argument (1), .... argument (n));
+<pre><code class="language-java">functionName (argument (1), .... argument (n));
 </code></pre>
 <h2 id="advantages">Advantages</h2>
 <ul>
@@ -227,22 +227,22 @@ public static void main(String[] args){
 <h2 id="sample">Sample</h2>
 <pre><code class="language-java">import java.util.Scanner;
 public class Example {
-  private static int add (int a, int b) {// function declarator
+  private static int add(int a, int b) {// function declarator
     / * Start of function definition. * /
-    int add;
-    add = a + b;
-    return add; // return statement of function
+    int total;
+    total = a + b;
+    return total; // return statement of function
     / * End of function definition. * /
   }
 
-  public static void main (String [] args) {
+  public static void main(String [] args) {
     int num1, num2, sum;
-    Scanner in = new Scanner (System.in);
-    System.out.println (&quot;Enters two number to add&quot;);
+    Scanner in = new Scanner(System.in);
+    System.out.println(&quot;Enters two number to add&quot;);
     num1 = in.nextInt ();
     num2 = in.nextInt ();
-    sum = add (num1, num2); // function call
-    System.out.println (&quot;Sum =&quot; + sum);
+    sum = add(num1, num2); // function call
+    System.out.println(&quot;Sum =&quot; + sum);
   }
 }
 </code></pre>

@@ -196,14 +196,14 @@
 import java.util.Scanner;
 
 public class IntroFuncions {
-    public static int potencia(int base, int exp) {
+    public static int elevar(int base, int exp) {
         int resultat = 1;
         for(int i = 0; i &lt; exp; i++) {
             resultat *= base;
         }
         return resultat;
     }
-    public static int suma(int a, int b) {
+    public static int sumar(int a, int b) {
         return a+b;
     }
     public static void main(String[] args) {
@@ -211,8 +211,8 @@ public class IntroFuncions {
         System.out.println(&quot;Introdueix dos números:&quot;);
         int a = in.nextInt();
         int b = in.nextInt();
-        System.out.println(&quot;El resultat de la seva potència és: &quot; + potencia(a,b));
-        System.out.println(&quot;El resultat de la seva suma és: &quot; + suma(a,b));
+        System.out.println(&quot;El resultat de la seva potència és: &quot; + elevar(a,b));
+        System.out.println(&quot;El resultat de la seva suma és: &quot; + sumar(a,b));
     }
 }
 </code></pre>
@@ -225,16 +225,16 @@ import static org.junit.jupiter.api.Assertions.*;
 class IntroFuncionsTest {
 
     @Test
-    void potencia() {
-        assertEquals(25, IntroFuncions.potencia(5,2));
-        assertEquals(125, IntroFuncions.potencia(5,3));
-        assertNotEquals(24, IntroFuncions.potencia(5,2));
+    void elevar() {
+        assertEquals(25, IntroFuncions.elevar(5,2));
+        assertEquals(125, IntroFuncions.elevar(5,3));
+        assertNotEquals(24, IntroFuncions.elevar(5,2));
     }
 
     @Test
-    void suma() {
-        assertEquals(7, IntroFuncions.suma(5,2));
-        assertNotEquals(8, IntroFuncions.suma(5,11));
+    void sumar() {
+        assertEquals(7, IntroFuncions.sumar(5,2));
+        assertNotEquals(8, IntroFuncions.sumar(5,11));
 
     }
 }
